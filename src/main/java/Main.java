@@ -32,9 +32,8 @@ public class Main {
     }
     //TODO:Change to Switch-Case
     public static int whichfirstnumber(int input) {
-        if ((input % 50) >= 40 && (input % 50) <= 49) {
-            int rest = addFirstNumber(input);
-            return rest;
+        if ((input % 50) >= 40) {
+            return addFirstNumber(input);
         } else if (input < 40) {
             return input;
         } else if (input == 100) {
@@ -45,9 +44,23 @@ public class Main {
             return input - 50;
         }
     }
+    /*public static int whichfirstnumber(int input) {
+        boolean state = true;
+        switch (true){
+            case 100 == input:
+                addtoarray(100);
+                return 0;
+            case 50 == input:
+                addtoarray(50);
+                return input - 50;
+            case ((input % 50) >= 40 && (input % 50) <= 49):
+                return addFirstNumber(input);
+            default:
+                return input;
+        }
+    }*/
     public static void clearnumbarray() {
         numbarray = new int[0];
-        Arrays.fill(numbarray, 0);
     }
     public static boolean check_input(int input) {
         return (input >= 1 && input <= 100);
